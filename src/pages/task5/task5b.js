@@ -136,11 +136,11 @@ export default class Task5b extends Component {
         const opt1prob = payoffs[Math.floor(Math.random()*5)];
         for (var i=0; i<5; i++) {if (payoffs[i]===opt1prob) {payoffs.splice(i, 1)}};
         const opt2prob = payoffs[Math.floor(Math.random()*4)];
-        for (var i=0; i<4; i++) {if (payoffs[i]===opt2prob) {payoffs.splice(i, 1)}};
+        for (i=0; i<4; i++) {if (payoffs[i]===opt2prob) {payoffs.splice(i, 1)}};
         const opt3prob = payoffs[Math.floor(Math.random()*3)];
-        for (var i=0; i<3; i++) {if (payoffs[i]===opt3prob) {payoffs.splice(i, 1)}};
+        for (i=0; i<3; i++) {if (payoffs[i]===opt3prob) {payoffs.splice(i, 1)}};
         const opt4prob = payoffs[Math.floor(Math.random()*2)];
-        for (var i=0; i<2; i++) {if (payoffs[i]===opt4prob) {payoffs.splice(i, 1)}};
+        for (i=0; i<2; i++) {if (payoffs[i]===opt4prob) {payoffs.splice(i, 1)}};
         const opt5prob = payoffs[0];
         this.setState({
             probs: {
