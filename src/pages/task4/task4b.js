@@ -42,7 +42,7 @@ export default class Task4b extends Component {
         const success = rand_num < roundProbabilities[[updatedOpt]];
         var nextOpt = updatedOpt;
 
-        if (this.state.order[2]==2){
+        if (this.state.order[2]===2){
             // Guessing
             const rand_opt = Math.random();
             nextOpt = "opt1";
@@ -63,7 +63,7 @@ export default class Task4b extends Component {
             }
         }
 
-        else if (this.state.order[2]==4){
+        else if (this.state.order[2]===4){
             // Epsilon-greedy (e=0.1)
             const rand_epsilon = Math.random();
             if (rand_epsilon <= 0.1) {
@@ -90,7 +90,7 @@ export default class Task4b extends Component {
 
         var updatedKey = updatedOpt + (success ? "Success" : "Failure");
 
-        if (this.state.order[2]==1){
+        if (this.state.order[2]===1){
             // Choices made by human player
             const choices = ["opt1Success", "opt2Success", "opt2Failure", "opt2Failure", "opt2Success", 
             "opt3Failure", "opt3Failure", "opt3Failure", "opt4Success", "opt4Failure", "opt4Success", 
@@ -134,13 +134,13 @@ export default class Task4b extends Component {
     randomPayoffRates() {
         var payoffs = [0.2, 0.35, 0.5, 0.65, 0.8];
         const opt1prob = payoffs[Math.floor(Math.random()*5)];
-        for (var i=0; i<5; i++) {if (payoffs[i]==opt1prob) {payoffs.splice(i, 1)}};
+        for (var i=0; i<5; i++) {if (payoffs[i]===opt1prob) {payoffs.splice(i, 1)}};
         const opt2prob = payoffs[Math.floor(Math.random()*4)];
-        for (var i=0; i<4; i++) {if (payoffs[i]==opt2prob) {payoffs.splice(i, 1)}};
+        for (var i=0; i<4; i++) {if (payoffs[i]===opt2prob) {payoffs.splice(i, 1)}};
         const opt3prob = payoffs[Math.floor(Math.random()*3)];
-        for (var i=0; i<3; i++) {if (payoffs[i]==opt3prob) {payoffs.splice(i, 1)}};
+        for (var i=0; i<3; i++) {if (payoffs[i]===opt3prob) {payoffs.splice(i, 1)}};
         const opt4prob = payoffs[Math.floor(Math.random()*2)];
-        for (var i=0; i<2; i++) {if (payoffs[i]==opt4prob) {payoffs.splice(i, 1)}};
+        for (var i=0; i<2; i++) {if (payoffs[i]===opt4prob) {payoffs.splice(i, 1)}};
         const opt5prob = payoffs[0];
         this.setState({
             probs: {
