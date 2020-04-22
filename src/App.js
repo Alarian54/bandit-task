@@ -28,7 +28,7 @@ export default class App extends Component {
             <Router>
                 <div className="app">
                     <Switch>
-                        <Route path="/" exact component={Consent}/>
+                        <Route exact path="/" exact component={Consent}/>
                         <Route path="/task1a" exact component={Task1a}/>
                         <Route path="/task1b" exact component={Task1b}/>
                         <Route path="/task2a" exact component={Task2a}/>
