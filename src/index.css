@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  font-size: 16px;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 250px;
+}
+
+.button {
+  background-color: rgb(112, 112, 255);
+  border: 2px solid rgb(112, 112, 255);
+  border-radius: 5px;
+  color: white;
+  padding: 12px 40px;
+  margin-left: 0px;
+  font-size: 16px;
+  transition-duration: 0.25s;
+}
+
+.button.leftpadded {
+  margin-left: 430px;
+}
+
+.button:hover {
+  background-color: white;
+  color: rgb(112, 112, 255);
+}
+
+.container {
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+  margin-left:10px;
+}
+
+.text h3 {
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+.text h3, .text p {
+  display: inline;
+  line-height: 30px;
 }
